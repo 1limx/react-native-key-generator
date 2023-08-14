@@ -28,8 +28,8 @@ class KeyGeneratorModule(reactContext: ReactApplicationContext) :
       if (outputEncoding != "base64" && outputEncoding != "hex") {
         return promise.reject("Output encoding error", "Output encoding should be in 'base64' or 'hex'", null)
       }
+      val keygen = KeyGenerator.getInstance("ChaCha20")
 
-      val keygen = KeyGenerator.getInstance("AES")
       keygen.init(size)
       val key: SecretKey = keygen.generateKey()
       val encodedKey = if (outputEncoding == "base64")

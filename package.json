@@ -1,7 +1,7 @@
 {
   "name": "react-native-key-generator",
-  "version": "0.1.0",
-  "description": "Secure unique key generator for React Native",
+  "version": "0.1.1",
+  "description": "Secure unique 128, 192, 256 bit key generator for React Native",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/index.d.ts",

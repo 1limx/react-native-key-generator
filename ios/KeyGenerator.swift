@@ -23,7 +23,7 @@ class KeyGenerator: NSObject {
   @objc(generateSymmetricKey:withOutputEncoding:withResolver:withRejecter:)
   func generateSymmetricKey(size: Int, outputEncoding: String, resolve:RCTPromiseResolveBlock,reject:RCTPromiseRejectBlock) -> Void {
       if (outputEncoding != "base64" && outputEncoding != "hex") {
-          reject("Output encoding error", "Output encoding should be in 'base64' or 'hex'", nil)
+          return reject("Output encoding error", "Output encoding should be in 'base64' or 'hex'", nil)
       }
 
       var newKey = SymmetricKey.init(size: SymmetricKeySize.bits256)

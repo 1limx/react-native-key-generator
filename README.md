@@ -1,6 +1,6 @@
 # react-native-key-generator
 
-Secure unique key generator for React Native
+Secure unique 128, 192, 256 bit key generator for React Native
 
 # Requirements
 iOS >= 13.0\
